@@ -1,0 +1,27 @@
+CRITICAL - 2024-02-11 16:57:24 --> TypeError: App\Controllers\UserController::index(): Return value must be of type string, none returned
+in APPPATH\Controllers\UserController.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\barcus\\public\\index.php')
+CRITICAL - 2024-02-11 17:23:52 --> ErrorException: include(partials/add_user_form.php): Failed to open stream: No such file or directory
+in APPPATH\Views\dashboard\users.php on line 8.
+ 1 APPPATH\Views\dashboard\users.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(partials/add_user_form.php): Failed to open stream: No such file or directory', 'C:\\Users\\User\\Desktop\\barcus\\app\\Views\\dashboard\\users.php', 8)
+ 2 APPPATH\Views\dashboard\users.php(8): include()
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\barcus\\app\\Views\\dashboard\\users.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/users', [], true)
+ 6 APPPATH\Controllers\UserController.php(9): view('dashboard/users')
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\UserController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\barcus\\public\\index.php')
+CRITICAL - 2024-02-11 16:34:14 --> TypeError: App\Controllers\GalleryController::index(): Return value must be of type string, none returned
+in APPPATH\Controllers\GalleryController.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\GalleryController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GalleryController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\barcus\\public\\index.php')
