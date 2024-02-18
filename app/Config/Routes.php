@@ -6,6 +6,7 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'PublicController::index');
+$routes->get('/service/(:any)', 'PublicController::service/$1');
 
 
 // ANY ROUTE BELOW IS ONLY MENT TO BE ACCESS BY ADMIN 

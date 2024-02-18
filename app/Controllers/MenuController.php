@@ -19,7 +19,7 @@ class MenuController extends BaseController
         $validationRules = [
 
             'menuName' => [
-                    'rules' => 'required|max_length[10]',
+                    'rules' => 'required|max_length[20]',
                     'label' => 'Menue Name',
                     'errors' => [
                         'required' => 'Menu name is required',
@@ -36,11 +36,11 @@ class MenuController extends BaseController
             ],
 
             'menuDescription' => [
-                'rules'=>'required|max_length[600]',
+                'rules'=>'required|max_length[60000]',
                 'label' => 'Menu description',
                 'errors' => [
                     'required' =>'Give the general service description.',
-                    'max_length' =>'The details cannot be more than 3000 characters'
+                    'max_length' =>'The details cannot be more than 60000 characters'
                 ]
             ],
 
@@ -111,7 +111,7 @@ class MenuController extends BaseController
             $validationRules = [
 
                 'menuName' => [
-                        'rules' => 'required|max_length[10]',
+                        'rules' => 'required|max_length[20]',
                         'label' => 'Menue Name',
                         'errors' => [
                             'required' => 'Menu name is required',
@@ -128,11 +128,11 @@ class MenuController extends BaseController
                 ],
     
                 'menuDescription' => [
-                    'rules'=>'required|max_length[600]',
+                    'rules'=>'required|max_length[60000]',
                     'label' => 'Menu description',
                     'errors' => [
                         'required' =>'Give the general service description.',
-                        'max_length' =>'The details cannot be more than 3000 characters'
+                        'max_length' =>'The details cannot be more than 60000 characters'
                     ]
                 ]
             ];

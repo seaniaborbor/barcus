@@ -36,7 +36,6 @@
             id="floatingTextarea" style="height: 150px;">
             <?=$menu_data['menuDescription']?>
         </textarea>
-        <label for="floatingTextarea">Page Content</label>
         <?php if(isset($validation) && $validation->hasError('menuDescription')) : ?>
              <div class="text-danger"><?=$validation->getError('menuDescription')?></div>
         <?php endif; ?>
@@ -46,3 +45,8 @@
    </form>
 </div>
 </div>
+
+<script>
+        // Initialize CKEditor
+        CKEDITOR.replace('menuDescription');
+    </script>

@@ -33,20 +33,20 @@ class ServiceController extends BaseController
            $validationRules = [
    
                'serviceName' => [
-                       'rules' => 'required|max_length[10]',
+                       'rules' => 'required|max_length[20]',
                        'label' => 'Service Name',
                        'errors' => [
                            'required' => 'service name is required',
-                           'max_length' => 'service name cannot be more than 10 characters'
+                           'max_length' => 'service name cannot be more than 20 characters'
                        ]
                    ],
 
                 'serviceIcon' => [
-                        'rules' => 'required|max_length[10]',
+                        'rules' => 'required|max_length[20]',
                         'label' => 'Service Icon',
                         'errors' => [
                             'required' => 'service icon is required',
-                            'max_length' => 'service icon cannot be more than 10 characters'
+                            'max_length' => 'service icon cannot be more than 20 characters'
                             ]
                     ],
    
@@ -67,11 +67,11 @@ class ServiceController extends BaseController
                 ],
    
                'serviceDescription' => [
-                   'rules'=>'required|max_length[600]',
+                   'rules'=>'required|max_length[60000]',
                    'label' => 'service description',
                    'errors' => [
                        'required' =>'Give the general service description.',
-                       'max_length' =>'The details cannot be more than 3000 characters'
+                       'max_length' =>'The details cannot be more than 60000 characters'
                    ]
                ],
    
@@ -153,20 +153,20 @@ class ServiceController extends BaseController
                $validationRules = [
        
                    'serviceName' => [
-                           'rules' => 'required|max_length[10]',
+                           'rules' => 'required|max_length[20]',
                            'label' => 'Service Name',
                            'errors' => [
                                'required' => 'service name is required',
-                               'max_length' => 'service name cannot be more than 10 characters'
+                               'max_length' => 'service name cannot be more than 20 characters'
                            ]
                        ],
     
                     'serviceIcon' => [
-                            'rules' => 'required|max_length[10]',
+                            'rules' => 'required|max_length[20]',
                             'label' => 'Service Icon',
                             'errors' => [
                                 'required' => 'service icon is required',
-                                'max_length' => 'service icon cannot be more than 10 characters'
+                                'max_length' => 'service icon cannot be more than 20 characters'
                                 ]
                         ],
        
@@ -187,11 +187,11 @@ class ServiceController extends BaseController
                     ],
        
                    'serviceDescription' => [
-                       'rules'=>'required|max_length[600]',
+                       'rules'=>'required|max_length[60000]',
                        'label' => 'service description',
                        'errors' => [
                            'required' =>'Give the general service description.',
-                           'max_length' =>'The details cannot be more than 3000 characters'
+                           'max_length' =>'The details cannot be more than 60000 characters'
                        ]
                    ]
                ];

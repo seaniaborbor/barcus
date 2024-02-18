@@ -33,9 +33,8 @@
     </div>
 
     <div class="form-floating mt-3">
-        <textarea class="form-control"  name="menuDescription" placeholder="Write the menu page content here"
-            id="floatingTextarea" style="height: 150px;"></textarea>
-        <label for="floatingTextarea">Page Content</label>
+        <textarea class="form-control "  name="menuDescription" placeholder="Write the menu page content here"
+            id="editor-textarea" style="height: 150px;"></textarea>
         <?php if(isset($validation) && $validation->hasError('menuDescription')) : ?>
              <div class="text-danger"><?=$validation->getError('menuDescription')?></div>
         <?php endif; ?>
@@ -45,3 +44,8 @@
    </form>
 </div>
 </div>
+
+<script>
+        // Initialize CKEditor
+        CKEDITOR.replace('menuDescription');
+    </script>

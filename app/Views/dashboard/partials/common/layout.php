@@ -27,8 +27,11 @@
     <!-- Customized Bootstrap Stylesheet -->
     <link href="<?=base_url('dashboard_asset/css/bootstrap.min.css')?>" rel="stylesheet">
 
+    <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+
     <!-- Template Stylesheet -->
     <link href="<?=base_url('dashboard_asset/css/style.css')?>" rel="stylesheet">
+    
 </head>
 
 <body>
@@ -202,6 +205,23 @@
      <!-- script/file that contains the success modal --> 
      <?php include('error_message.php')?>
 
+     <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Select the first textarea with the class 'editor-textarea'
+    var textarea = document.querySelector('#editor-textarea');
+    
+    if (textarea) {
+      BalloonEditor
+        .create(textarea, {
+          plugins: [Image, ImageCaption, ImageStyle, ImageToolbar, Essentials, MediaEmbed],
+          toolbar: ['image', 'mediaEmbed', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'undo', 'redo']
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    }
+  });
+</script>
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -215,6 +235,8 @@
 
     <!-- Template Javascript -->
     <script src="<?=base_url('dashboard_asset/js/main.js')?>"></script>
+
+  
 </body>
 
 </html>

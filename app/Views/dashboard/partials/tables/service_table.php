@@ -17,7 +17,7 @@
                             <th scope="row">1</th>
                             <td><?=$srv_data->serviceName?></td>
                             <td>
-                                <?php if($srv_data->serviceStatus == '1'){
+                                <?php if($srv_data->serviceStatus == 1){
                                     echo "Visible";
                                 }else{
                                     echo "Hidden";

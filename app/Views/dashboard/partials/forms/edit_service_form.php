@@ -25,8 +25,8 @@
         <select class="form-select" name="serviceStatus" id="floatingSelect"
             aria-label="Floating label select example">
             <option selected >--choose--</option>
-            <option value="1">Hidden</option>
-            <option value="2">Visible</option>
+            <option value="1">Visible</option>
+            <option value="2">Hidden</option>
         </select>
         <label for="floatingSelect">Service Visibility On Site</label>
         <?php if(isset($validation) && $validation->hasError('serviceStatus')) : ?>
@@ -63,7 +63,6 @@
             id="floatingTextarea" style="height: 150px;">
             <?=$service_data['serviceDescription']?>
         </textarea>
-        <label for="floatingTextarea">Deatils of service</label>
         <?php if(isset($validation) && $validation->hasError('serviceDescription')) : ?>
              <div class="text-danger"><?=$validation->getError('serviceDescription')?></div>
         <?php endif; ?>
@@ -74,3 +73,8 @@
 
 </div>
 </div>
+
+<script>
+        // Initialize CKEditor
+        CKEDITOR.replace('serviceDescription');
+    </script>
