@@ -31,7 +31,7 @@
 
   <!-- welcome section -->
 
-  <section class="py-5 bg-light">
+  <section class=" bg-light">
     <div class="container">
     <div class="row">
 

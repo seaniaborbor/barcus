@@ -29,15 +29,14 @@
    </div>
   <!-- carousel section ends --> 
 
-  <!-- welcome section -->
-
   <section class="py-5 bg-light">
     <div class="container">
     <div class="row">
 
-      <div class="col-12 text-center py-5">
-        <h3 class="text-uppercase">Welcome To Barcus <?=$service[0]['menuName']?></h3>
-        <?=$service[0]['menuDescription']?>
+      <div class="col-md-8 offset-md-2 py-5 px-5">
+        <h1 class="text-uppercase fw-bold text-center">Barcus <?=$service_sub[0]['serviceName']?> Services</h1>
+        <img src="<?=base_url('uploads/'.$service_sub[0]['servicePic'])?>" class=" w-100 img-fluid my-5 rounded shadow-lg" alt="">
+        <?=$service_sub[0]['serviceDescription']?>
       </div>
 
       <?php //print_r($service)?>
@@ -45,32 +44,5 @@
   </div>
   </section>
 
-  <section>
-    <div class="container">
-        <div class="row">
-        <h3 class="text-uppercase py-4 text-center"> Our Popular <?=$service[0]['menuName']?> Services </h3>
-            <?php if(isset($sub_services)) : ?>
-                <?php foreach($sub_services as $servs) : ?>
-                    <div class="col-md-4 py-3">
-                        <div class="card custom-card">
-                                <!-- Background Image -->
-                                <img src="<?=base_url('uploads/'.$servs['servicePic'])?>" class="card-img" alt="Background Image">
-                                <!-- Text Overlay in the lower-left corner -->
-                                <div class="card-img-overlay">
-                                    <a style="text-decoration:none" href="<?=base_url('subservice/'.$servs['serviceName'])?>"><h4 class="card-title text-white text-uppercase text fw-bold">
-                                    Barcus <?=$servs['serviceName']?>
-                                    </h4></a>
-                                    <!-- You can add additional text or elements here -->
-                            </div>
-                        </div>
-                        </div>
-                <?php endforeach; ?>
-            <?php endif; ?>
-        </div>
-    </div>
-  </section>
-
-
-  
 
 <?=$this->endSection()?>

@@ -17,13 +17,21 @@
   .carousel-fade .active.carousel-item-end {
     transition: opacity 0s 7s;
   }
-    	
+    .nav-link, .dropdown-item {
+      font-size:0.9em;
+    }
+    p{
+      font-size:1em;
+    }	
     .superNav {
       font-size:13px;
     }
     .form-control {
       outline:none !important;
       box-shadow: none !important;
+    }
+    select{
+      margin-top:10px;
     }
 
 
@@ -109,22 +117,49 @@
             </div>
           </div> -->
           <ul class="navbar-nav ms-auto ">
+          <li class="btn bg-danger btn-danger rounded-0">
+            <a class="dropdown-item " href="/">
+              Home
+            </a>
+          </li>
           <?php if(isset($mainMenu)) : ?>
               <?php foreach($mainMenu as $mm) : ?>
-                <li class="nav-item">
-                  <a class="nav-link mx-2 text-uppercase active" aria-current="page" href="<?=base_url('/service/'.$mm['menuName'])?>">
-                    <?=$mm['menuName']?>
-                  </a>
-                </li>
+                <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <?=$mm['menuName']?>
+                </a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="<?=base_url('service/'.$mm['menuName'])?>">Barcus  <?=$mm['menuName']?></a></li>
+                  <?php if(isset($sub_menu)) :?>
+                    <?php foreach($sub_menu as $submnn) : ?>
+                      <?php if($submnn['serviceMenu'] == $mm['menuId'] && $submnn['serviceStatus'] == 1) : ?>
+                        <li>
+                          <a class="dropdown-item" href="<?=base_url('subservice/'.$submnn['serviceName'])?>">
+                            <?=$submnn['serviceName']?>
+                          </a>
+                        </li>
+                      <?php endif; ?>
+                    <?php endforeach; ?>
+                  <?php endif; ?>
+                </ul>
+              </li>
               <?php endforeach; ?>
             <?php endif; ?>
           </ul>
           <ul class="navbar-nav ms-auto ">
-            <li class="nav-item">
-              <a class="nav-link mx-2 text-uppercase" href="#"><i class="fa-solid fa-cart-shopping me-1"></i> Cart</a>
-            </li>
-            <li class="nav-item  rounded-0 px-0">
-              <a class="nav-link btn btn-danger btn-sm bg-danger mx-2 text-uppercase text-white mx-0  " href="#"><i class="bi bi-person me-1"></i> Account</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Customer Support
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+            <li class="nav-item btn btn-danger p-0 btn-sm bg-danger rounded-0">
+              <a class="nav-link  text-white mx-0  " href="#"><i class="bi bi-person me-1"></i> Contact</a>
             </li>
           </ul>
         </div>
@@ -237,7 +272,9 @@ PO– BOX, 8-MILL <br>
 
             <div class="col-md-6 px-3 text-center">
               <center>
+              <a href="<?=base_url('/payment')?>">
                 <img src="<?=base_url('imgs/icon/paymenticon.png')?>" class="img-fluid" style="max-width:300px" alt="">
+              </a>
               </center>
               <button class="btn btn-danger btn-lg rounded-0 my-3">Pay Now</button>
               <p class=" fw-bold " style="">Copyright ©️ AMI INVESTMENT GROUP (PTY) LTD. All rights reserved</p>
@@ -266,7 +303,9 @@ PO– BOX, 8-MILL <br>
             <b>Monday to Friday:</b> 9AM to 6PM<br>
             <b>Saturday:</b> By Appointments Only<br>
             <b>Global Offices:</b> <a class="text-danger" href="#">Click here!</a> 
-            <img src="<?=base_url('imgs/icon/Untitled-2-01.png')?>" class="img-fluid" alt="">
+            
+             <img src="<?=base_url('imgs/icon/Untitled-2-01.png')?>" class="img-fluid" alt="">
+           
 
             </div>
         </div>
@@ -288,7 +327,5 @@ PO– BOX, 8-MILL <br>
               </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-  </body>
+   </body>
 </html>

@@ -1,0 +1,16 @@
+CRITICAL - 2024-02-20 14:27:21 --> ErrorException: Undefined variable $submnn
+in APPPATH\Views\public\partials\common\layout.php on line 121.
+ 1 APPPATH\Views\public\partials\common\layout.php(121): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $submnn', 'C:\\Users\\User\\Desktop\\barcus\\app\\Views\\public\\partials\\common\\layout.php', 121)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\barcus\\app\\Views\\public\\partials\\common\\layout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('public/partials/common/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('public/service_page', [], true)
+ 6 APPPATH\Controllers\PublicController.php(57): view('public/service_page', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PublicController->service('Designs')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\barcus\\public\\index.php')
+INFO - 2024-02-20 14:50:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 14:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 14:51:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

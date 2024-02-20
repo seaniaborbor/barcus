@@ -7,10 +7,16 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/', 'PublicController::index');
 $routes->get('/service/(:any)', 'PublicController::service/$1');
+$routes->get('/subservice/(:any)', 'PublicController::subservice/$1');
+
+$routes->get('/about', 'PublicController::about');
+$routes->get('/contact', 'PublicController::contact');
+
+$routes->get('payment/', 'PaymentController::index');
+$routes->post('payment', 'PaymentController::index');
 
 
 // ANY ROUTE BELOW IS ONLY MENT TO BE ACCESS BY ADMIN 
-
 
 $routes->get('/dashboard', 'DashboardController::index');
 
