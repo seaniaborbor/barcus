@@ -88,4 +88,62 @@ class PublicController extends BaseController
         return view('public/sub_servicepage', $data);
     }
 
+    public function search(){
+        $data  = [];
+        // get the list of menu items
+        $menuModel = new MenuModel();
+        $data['mainMenu'] = $menuModel->where('menuStatus', 1)->findAll(); 
+
+        // get the sub menu 
+        $ServiceModel = new ServiceModel();
+        $data['sub_menu'] = $ServiceModel->findAll();
+
+        $search = $this->request->getPost('search');
+        
+        // get the value search from the service model
+        $data['search_result'] = $ServiceModel->like('serviceDescription', $search)->get()->getResult();
+        if(!$data['search_result']){
+            return redirect()->to("/")->with("error","No match found of yourch on our pages. ");
+        }
+
+        return view('public/search', $data);
+
+    }
+
+    // contact method 
+
+    public function contact(){
+        $data  = [];
+
+        // get the list of menu items 
+        $menuModel = new MenuModel();
+        $data['mainMenu'] = $menuModel->where('menuStatus', 1)->findAll();
+
+        // get the sub menu 
+        $ServiceModel = new ServiceModel();
+        $data['sub_menu'] = $ServiceModel->findAll();
+
+        // render the index/home page 
+        return view('public/contact', $data);
+        
+    }
+
+
+    // about us 
+    public function about(){
+        $data  = [];
+
+        // get the list of menu items 
+        $menuModel = new MenuModel();
+        $data['mainMenu'] = $menuModel->where('menuStatus', 1)->findAll();
+
+        // get the sub menu 
+        $ServiceModel = new ServiceModel();
+        $data['sub_menu'] = $ServiceModel->findAll();
+
+        // render the index/home page 
+        return view('public/about', $data);
+        
+    }
+
 }

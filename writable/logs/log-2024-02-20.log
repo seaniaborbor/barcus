@@ -14,3 +14,382 @@ in APPPATH\Views\public\partials\common\layout.php on line 121.
 INFO - 2024-02-20 14:50:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-02-20 14:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-02-20 14:51:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-20 15:16:42 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\User\Desktop\barcus\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\User\Desktop\barcus\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'barcus_db', 3306, '', 0)
+#1 C:\Users\User\Desktop\barcus\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\User\Desktop\barcus\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\User\Desktop\barcus\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\User\Desktop\barcus\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\User\Desktop\barcus\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\User\Desktop\barcus\app\Controllers\PublicController.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\User\Desktop\barcus\system\CodeIgniter.php(941): App\Controllers\PublicController->index()
+#8 C:\Users\User\Desktop\barcus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+#9 C:\Users\User\Desktop\barcus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\User\Desktop\barcus\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\User\Desktop\barcus\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\D...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\User\Desktop\barcus\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\User\Desktop\barcus\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\User\Desktop\barcus\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Desktop\barcus\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\User\Desktop\barcus\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\User\Desktop\barcus\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\User\Desktop\barcus\app\Controllers\PublicController.php(18): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\User\Desktop\barcus\system\CodeIgniter.php(941): App\Controllers\PublicController->index()
+#7 C:\Users\User\Desktop\barcus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+#8 C:\Users\User\Desktop\barcus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Desktop\barcus\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Desktop\barcus\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\D...')
+#11 {main}
+CRITICAL - 2024-02-20 15:16:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`
+WHERE `menuStatus` = :menuStatus:', [...], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\PublicController.php(18): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PublicController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\barcus\\public\\index.php')
+INFO - 2024-02-20 15:16:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-02-20 15:47:00 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\User\Desktop\barcus\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\Users\User\Desktop\barcus\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'barcus_db', 3306, '', 0)
+#1 C:\Users\User\Desktop\barcus\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\User\Desktop\barcus\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\User\Desktop\barcus\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\User\Desktop\barcus\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\User\Desktop\barcus\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\Users\User\Desktop\barcus\app\Controllers\PublicController.php(18): CodeIgniter\BaseModel->findAll()
+#7 C:\Users\User\Desktop\barcus\system\CodeIgniter.php(941): App\Controllers\PublicController->index()
+#8 C:\Users\User\Desktop\barcus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+#9 C:\Users\User\Desktop\barcus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\User\Desktop\barcus\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\User\Desktop\barcus\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\D...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\User\Desktop\barcus\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\Users\User\Desktop\barcus\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\User\Desktop\barcus\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\User\Desktop\barcus\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\User\Desktop\barcus\system\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\User\Desktop\barcus\system\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\Users\User\Desktop\barcus\app\Controllers\PublicController.php(18): CodeIgniter\BaseModel->findAll()
+#6 C:\Users\User\Desktop\barcus\system\CodeIgniter.php(941): App\Controllers\PublicController->index()
+#7 C:\Users\User\Desktop\barcus\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+#8 C:\Users\User\Desktop\barcus\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\User\Desktop\barcus\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\User\Desktop\barcus\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\D...')
+#11 {main}
+CRITICAL - 2024-02-20 15:47:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `menu`
+WHERE `menuStatus` = :menuStatus:', [...], false)
+ 3 SYSTEMPATH\Model.php(242): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(638): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\PublicController.php(18): CodeIgniter\BaseModel->findAll()
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PublicController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PublicController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\barcus\\public\\index.php')
+INFO - 2024-02-20 15:47:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 15:47:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-20 15:47:55 --> Error: Class "App\Models\CategoryModel" not found
+in APPPATH\Controllers\BlogController.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\barcus\\public\\index.php')
+INFO - 2024-02-20 15:52:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-20 15:52:56 --> Error: Class "App\Controllers\CategoryModel" not found
+in APPPATH\Controllers\BlogController.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\barcus\\public\\index.php')
+INFO - 2024-02-20 15:53:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-20 15:53:22 --> ErrorException: include(partials/tables/blog_table.php): Failed to open stream: No such file or directory
+in APPPATH\Views\dashboard\blog.php on line 10.
+ 1 APPPATH\Views\dashboard\blog.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(partials/tables/blog_table.php): Failed to open stream: No such file or directory', 'C:\\Users\\User\\Desktop\\barcus\\app\\Views\\dashboard\\blog.php', 10)
+ 2 APPPATH\Views\dashboard\blog.php(10): include()
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\barcus\\app\\Views\\dashboard\\blog.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/blog', [], true)
+ 6 APPPATH\Controllers\BlogController.php(109): view('dashboard/blog', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\barcus\\public\\index.php')
+INFO - 2024-02-20 15:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-20 15:57:46 --> ErrorException: include(partials/forms/add_blog_post.php): Failed to open stream: No such file or directory
+in APPPATH\Views\dashboard\blog.php on line 24.
+ 1 APPPATH\Views\dashboard\blog.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(partials/forms/add_blog_post.php): Failed to open stream: No such file or directory', 'C:\\Users\\User\\Desktop\\barcus\\app\\Views\\dashboard\\blog.php', 24)
+ 2 APPPATH\Views\dashboard\blog.php(24): include()
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\barcus\\app\\Views\\dashboard\\blog.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/blog', [], true)
+ 6 APPPATH\Controllers\BlogController.php(109): view('dashboard/blog', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\barcus\\public\\index.php')
+INFO - 2024-02-20 16:00:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-20 16:00:47 --> ErrorException: Undefined array key "post_category"
+in APPPATH\Views\dashboard\partials\forms\add_blog_post.php on line 32.
+ 1 APPPATH\Views\dashboard\partials\forms\add_blog_post.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "post_category"', 'C:\\Users\\User\\Desktop\\barcus\\app\\Views\\dashboard\\partials\\forms\\add_blog_post.php', 32)
+ 2 APPPATH\Views\dashboard\blog.php(24): include('C:\\Users\\User\\Desktop\\barcus\\app\\Views\\dashboard\\partials\\forms\\add_blog_post.php')
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\barcus\\app\\Views\\dashboard\\blog.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/blog', [], true)
+ 6 APPPATH\Controllers\BlogController.php(109): view('dashboard/blog', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\barcus\\public\\index.php')
+INFO - 2024-02-20 16:06:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-20 16:06:25 --> ErrorException: Undefined array key "post_category"
+in APPPATH\Views\dashboard\partials\forms\add_blog_post.php on line 32.
+ 1 APPPATH\Views\dashboard\partials\forms\add_blog_post.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "post_category"', 'C:\\Users\\User\\Desktop\\barcus\\app\\Views\\dashboard\\partials\\forms\\add_blog_post.php', 32)
+ 2 APPPATH\Views\dashboard\blog.php(24): include('C:\\Users\\User\\Desktop\\barcus\\app\\Views\\dashboard\\partials\\forms\\add_blog_post.php')
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\barcus\\app\\Views\\dashboard\\blog.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/blog', [], true)
+ 6 APPPATH\Controllers\BlogController.php(109): view('dashboard/blog', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\barcus\\public\\index.php')
+INFO - 2024-02-20 16:06:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-20 16:06:54 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboard/partials/layout.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/partials/layout.php')
+ 2 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('dashboard/partials/layout', [], true)
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/blog', [], true)
+ 4 APPPATH\Controllers\BlogController.php(109): view('dashboard/blog', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\barcus\\public\\index.php')
+INFO - 2024-02-20 16:09:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:10:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-20 16:10:43 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboard/partials/common/content.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/partials/common/content.php')
+ 2 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('dashboard/partials/common/content', [], true)
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/blog', [], true)
+ 4 APPPATH\Controllers\BlogController.php(109): view('dashboard/blog', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\barcus\\public\\index.php')
+INFO - 2024-02-20 16:11:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:11:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:17:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:17:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:17:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:18:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-20 16:18:18 --> Error: Class "App\Controllers\CategoryModel" not found
+in APPPATH\Controllers\BlogController.php on line 136.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->edit('2')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\barcus\\public\\index.php')
+INFO - 2024-02-20 16:20:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-20 16:20:09 --> ErrorException: Undefined array key "post_category"
+in APPPATH\Views\dashboard\partials\forms\edit_blog_form.php on line 32.
+ 1 APPPATH\Views\dashboard\partials\forms\edit_blog_form.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "post_category"', 'C:\\Users\\User\\Desktop\\barcus\\app\\Views\\dashboard\\partials\\forms\\edit_blog_form.php', 32)
+ 2 APPPATH\Views\dashboard\edit_blog.php(13): include('C:\\Users\\User\\Desktop\\barcus\\app\\Views\\dashboard\\partials\\forms\\edit_blog_form.php')
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\barcus\\app\\Views\\dashboard\\edit_blog.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/edit_blog', [], true)
+ 6 APPPATH\Controllers\BlogController.php(227): view('dashboard/edit_blog', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->edit('2')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\barcus\\public\\index.php')
+INFO - 2024-02-20 16:24:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-20 16:24:05 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboard/partials/layout.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/partials/layout.php')
+ 2 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('dashboard/partials/layout', [], true)
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/edit_blog', [], true)
+ 4 APPPATH\Controllers\BlogController.php(227): view('dashboard/edit_blog', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->edit('2')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\barcus\\public\\index.php')
+INFO - 2024-02-20 16:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-20 16:25:10 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboard/partials/layout.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/partials/layout.php')
+ 2 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('dashboard/partials/layout', [], true)
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/edit_blog', [], true)
+ 4 APPPATH\Controllers\BlogController.php(227): view('dashboard/edit_blog', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->edit('2')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\barcus\\public\\index.php')
+INFO - 2024-02-20 16:25:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:25:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:25:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:25:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:25:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:26:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:27:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:27:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:27:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:27:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:27:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:27:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:28:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:28:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:29:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:29:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:29:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:29:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:29:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:30:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:30:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:30:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:30:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:30:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:33:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:33:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:33:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:33:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:33:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:34:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:34:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:34:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:34:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:34:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 16:35:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:30:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:31:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:32:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:34:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:35:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:35:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:35:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:35:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:35:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:35:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:35:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:35:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:36:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:37:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:37:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:38:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:38:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:38:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:38:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:38:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:39:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:48:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:49:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:49:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:51:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 17:57:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-20 17:57:22 --> ErrorException: include(partials/clients_testemonials.php): Failed to open stream: No such file or directory
+in APPPATH\Views\dashboard\testimonials.php on line 10.
+ 1 APPPATH\Views\dashboard\testimonials.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(partials/clients_testemonials.php): Failed to open stream: No such file or directory', 'C:\\Users\\User\\Desktop\\barcus\\app\\Views\\dashboard\\testimonials.php', 10)
+ 2 APPPATH\Views\dashboard\testimonials.php(10): include()
+ 3 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\barcus\\app\\Views\\dashboard\\testimonials.php')
+ 4 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/testimonials', [], true)
+ 6 APPPATH\Controllers\TestimonialsController.php(100): view('dashboard/testimonials', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\TestimonialsController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestimonialsController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\barcus\\public\\index.php')
+INFO - 2024-02-20 17:58:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-20 17:58:56 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboard/partials/layout.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/partials/layout.php')
+ 2 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('dashboard/partials/layout', [], true)
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/testimonials', [], true)
+ 4 APPPATH\Controllers\TestimonialsController.php(100): view('dashboard/testimonials', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\TestimonialsController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestimonialsController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\barcus\\public\\index.php')
+INFO - 2024-02-20 18:00:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:02:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-02-20 18:02:15 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "dashboard/partials/layout.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('dashboard/partials/layout.php')
+ 2 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('dashboard/partials/layout', [], true)
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/edit_testimonial', [], true)
+ 4 APPPATH\Controllers\TestimonialsController.php(214): view('dashboard/edit_testimonial', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\TestimonialsController->edit('2')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TestimonialsController))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\barcus\\public\\index.php')
+INFO - 2024-02-20 18:02:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:02:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:02:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:02:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:02:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:03:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:05:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:05:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:05:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:05:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:05:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:05:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:07:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:07:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:07:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:07:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:07:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:07:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:08:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:08:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:08:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:08:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:08:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:08:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:08:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:09:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:09:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:09:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:09:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:09:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:09:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-02-20 18:09:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

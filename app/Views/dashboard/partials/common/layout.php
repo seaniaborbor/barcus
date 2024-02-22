@@ -65,8 +65,10 @@
                     <a href="<?=base_url('/dashboard/')?>" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <a href="<?=base_url('/dashboard/menu')?>" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Menu</a>
                     <a href="<?=base_url('/dashboard/service')?>" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Services</a>
-                    <a href="<?=base_url('/dashboard/gallery')?>" class="nav-item nav-link"><i class="fa fa-image me-2"></i>Gallery</a>
-                    <a href="<?=base_url('/dashboard/user')?>" class="nav-item nav-link"><i class="fa fa-user-tie me-2"></i>Users</a>
+                    <a href="<?=base_url('/dashboard/blog')?>" class="nav-item nav-link"><i class="fa fa-book me-2"></i>Blog</a>
+                    <a href="<?=base_url('/dashboard/testimonials')?>" class="nav-item nav-link"><i class="fa fa-quote-right me-2"></i>Testimonials</a>
+                    <a href="<?=base_url('/dashboard/team')?>" class="nav-item nav-link"><i class="fa fa-users me-2"></i>Team/Users</a>
+
                 </div>
             </nav>
         </div>

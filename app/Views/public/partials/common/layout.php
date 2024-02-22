@@ -10,6 +10,38 @@
     *{
       font-family: "Roboto", Helvetica, Arial, Verdana, sans-serif;
     }
+
+    .floating-icons {
+            position: fixed;
+            bottom: 20px;
+            z-index: 1000;
+            display: flex;
+            width:100%;
+            justify-content: space-between;
+        }
+
+        .whatsapp-chat, .contact-form-toggle {
+            background-color: #25D366; /* WhatsApp green color */
+            color: #fff;
+            border-radius: 50%;
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+        }
+
+        .contact-form {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1001;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
      .carousel-item {
     transition: transform .5s ease-in-out;
   }
@@ -23,6 +55,11 @@
     p{
       font-size:1em;
     }	
+   img[src*="googlelogo"],
+#google_translate_element a[href*="translate.google"] {
+    display: none;
+}
+
     .superNav {
       font-size:13px;
     }
@@ -75,20 +112,28 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 centerOnMobile">
-            <span class="me-3"> <span class="badge bg-light border border-danger rounded-circle">
+            <span class="me-3"> <span class="badge bg-light ">
               <i class="bi bi-telephone-inbound mt-3 mb-3 text-danger"></i>
             </span> <strong>1-800-123-1234</strong></span>
             <span class="d-none d-lg-inline-block d-md-inline-block d-sm-inline-block d-xs-none me-3">
-              <span class="badge bg-light border border-danger rounded-circle">
+              <span class="badge bg-light border ">
               <i class="bi bi-envelope mt-3 mb-3 text-danger"></i>
             </span>
               <strong>info@somedomain.com</strong></span>
           </div>
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 d-none d-lg-block d-md-block-d-sm-block d-xs-none text-end">
-            <select  class="me-3 border-0 bg-light">
+            <!-- <select  class="me-3 border-0 bg-light">
               <option value="en-us">EN-US</option>
-            </select>
-            <span class="me-3"><i class="fa-solid fa-file  text-muted me-2"></i><a class="text-muted" href="#">Policy</a></span>
+            </select> -->
+            <span id="google_translate_element"></span>
+            <script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+      
           </div>
         </div>
       </div>
@@ -149,17 +194,20 @@
           <ul class="navbar-nav ms-auto ">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Customer Support
+              More
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="/contact">Customer Support</a></li>
+              <li><a class="dropdown-item" href="/testominals">Testimonnials</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="/about">About Barcus Group of Agencies</a></li>
             </ul>
           </li>
+            <li class="nav-item">
+              <a class="nav-link  text-dark mx-0 " data-bs-toggle="modal" data-bs-target="#exampleModal" href="#"><i class="bi bi-search me-1"></i></a>
+            </li>
             <li class="nav-item btn btn-danger p-0 btn-sm bg-danger rounded-0">
-              <a class="nav-link  text-white mx-0  " href="#"><i class="bi bi-person me-1"></i> Contact</a>
+              <a class="nav-link  text-white mx-0  " href="/contact">Contact</a>
             </li>
           </ul>
         </div>
@@ -276,8 +324,8 @@ PO– BOX, 8-MILL <br>
                 <img src="<?=base_url('imgs/icon/paymenticon.png')?>" class="img-fluid" style="max-width:300px" alt="">
               </a>
               </center>
-              <button class="btn btn-danger btn-lg rounded-0 my-3">Pay Now</button>
-              <p class=" fw-bold " style="">Copyright ©️ AMI INVESTMENT GROUP (PTY) LTD. All rights reserved</p>
+              <a href="<?=base_url('/payment')?>" class="btn btn-danger rounded-0">Pay Now</a>
+              <p class=" fw-bold " style="">Copyright ©️ BGOA INVESTMENT GROUP (PTY) LTD. All rights reserved</p>
             </div>
 
             <div class="col-md-3">
@@ -315,17 +363,110 @@ PO– BOX, 8-MILL <br>
   </section>
   <div class="container">
   <div class="row">
-        <div class="col-12 py-2 text-center">
-              <a href="#" class="text-dark">Terms and Conditions</a>
-<a href="#" class="text-dark">Anti-Fraud Policy</a>
-<a href="#" class="text-dark">GDPR Privacy Policy</a>
-<a href="#" class="text-dark">Cookie Policy</a>
-<a href="#" class="text-dark">Customer Complaints</a>
-              </div>
-        </div>
+    <div class="col-12 py-2 text-center">
+          <a href="#" class="text-dark">Terms and Conditions</a>
+          <a href="#" class="text-dark">Anti-Fraud Policy</a>
+          <a href="#" class="text-dark">GDPR Privacy Policy</a>
+          <a href="#" class="text-dark">Cookie Policy</a>
+          <a href="#" class="text-dark">Customer Complaints</a>
+    </div>
+    </div>
   </div>
-              </div>
+    </div>
+
+    <!-- this modal contains the search input area/form ---> 
+
+
+
+<!-- Modal -->
+<div class="modal fade" style="background:rgba(0,0,0,.3)" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Search What you're looking for</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body py-5">
+          <div class="container">
+           <form action="<?=base_url('search')?>" method="post">
+            <input name="search" type="text" class="form-control rounded-0 form-control-lg" placeholder="Search..." aria-label="Search" aria-describedby="search-btn">
+              <button class="btn btn-danger rounded-pill mt-3 " type="submit" id="search-btn">Search</button>
+           </form>
+    </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- search modal ends here --> 
+
+<div class="contact-form" id="contactForm">
+    <button type="button" class="btn-close" onclick="toggleContactForm()" aria-label="Close"></button>
+    <h4>Contact Us</h4>
+    <form>
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<div class="floating-icons">
+<div class="contact-form-toggle bg-danger" onclick="toggleContactForm()">
+<i class="bi bi-envelope-arrow-up mx-1"></i>
+    </div>
+    <div class="whatsapp-chat" onclick="openWhatsApp()">
+      <i class="bi bi-chat-dots mx-1"></i>
+    </div>
+</div>
+
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="delayedModal" tabindex="-1" aria-labelledby="delayedModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+            <h1 class="modal-title text-danger my-5 fw-bold " id="delayedModalLabel">Leaving Soon?</h1>
+
+                <!-- Customize the modal content as needed -->
+                <a href="/contact" class="btn btn-danger rounded-0 btn-lg">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openWhatsApp() {
+        // Replace '123456789' with your actual WhatsApp number
+        window.open('https://wa.me/+821068879917', '_blank');
+    }
+    function toggleContactForm() {
+        var contactForm = document.getElementById('contactForm');
+        contactForm.style.display = (contactForm.style.display === 'none' || contactForm.style.display === '') ? 'block' : 'none';
+    }
+</script>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-   </body>
+   
+    <script>
+    // Use setTimeout to open the modal after 10 seconds (10000 milliseconds)
+    setTimeout(function () {
+        var delayedModal = new bootstrap.Modal(document.getElementById('delayedModal'));
+        delayedModal.show();
+    }, 10000);
+</script>
+  </body>
 </html>

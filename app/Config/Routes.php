@@ -8,15 +8,22 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'PublicController::index');
 $routes->get('/service/(:any)', 'PublicController::service/$1');
 $routes->get('/subservice/(:any)', 'PublicController::subservice/$1');
+$routes->post('search/', 'PublicController::search');
+$routes->get('about/', 'PublicController::about');
 
-$routes->get('/about', 'PublicController::about');
 $routes->get('/contact', 'PublicController::contact');
 
 $routes->get('payment/', 'PaymentController::index');
 $routes->post('payment', 'PaymentController::index');
 
+$routes->get('/auth', 'AuthController::index');
+$routes->post('/auth', 'AuthController::index');
+$routes->get('/logout', 'AuthController::logout');
+
 
 // ANY ROUTE BELOW IS ONLY MENT TO BE ACCESS BY ADMIN 
+
+$routes->group("", ['filter'=>'agentProtector'], function($routes){
 
 $routes->get('/dashboard', 'DashboardController::index');
 
@@ -33,3 +40,25 @@ $routes->post('/dashboard/service/edit/(:any)', 'ServiceController::edit/$1');
 
 $routes->get('/dashboard/gallery/', 'GalleryController::index');
 $routes->get('/dashboard/user/', 'UserController::index');
+
+// admin blog routes 
+$routes->get('/dashboard/blog', 'BlogController::index');
+$routes->post('/dashboard/blog', 'BlogController::index');
+$routes->get('/dashboard/edit/blog/(:any)', 'BlogController::edit/$1');
+$routes->post('/dashboard/edit/blog/(:any)', 'BlogController::edit/$1');
+$routes->get('/dashboard/delete/blog/(:any)', 'BlogController::delete/$1');
+
+// team members routes
+$routes->get('/dashboard/team', 'TeamMemberController::index');
+$routes->post('/dashboard/team', 'TeamMemberController::index');
+$routes->get('/dashboard/edit/team/(:any)', 'TeamMemberController::edit/$1');
+$routes->post('/dashboard/edit/team/(:any)', 'TeamMemberController::edit/$1');
+
+// testimonials routes
+$routes->get('/dashboard/testimonials', 'TestimonialsController::index');
+$routes->post('/dashboard/testimonials', 'TestimonialsController::index');
+$routes->get('/dashboard/edit/testimonials/(:any)', 'TestimonialsController::edit/$1');
+$routes->post('/dashboard/edit/testimonials/(:any)', 'TestimonialsController::edit/$1');
+
+
+});

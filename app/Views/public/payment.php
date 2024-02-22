@@ -14,15 +14,16 @@
             <div class="col-12">
                 <h2 class="text-secondary fw-bold">Pay Online</h2>
                 <ul>
-                    <li>Please fill in the form properly</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    <li> Perferendis optio debitis dolore quisquam voluptates praesentium iste </li>
-                    <li>culpa deleniti error ducimus est voluptatum, vel eaque vitae animi molestiae nisi magni odio.</li>
+                    <li>Please fill in the form properly</li> 
+                    <li> <span class="text-danger">Correspondence with you will mainly be by email. </span>
+                        Please ensure that your email address is clearly eligible.</li>
+                       <li> For more information, please contact barcusgroup@gmail.com</li>
+                        <li>Click <span class="text-danger">here</span> to view our Anti-Fraud Policy</li>
                 </ul>
             </div>
 
             <div class="col-12 py-5">
-                <form action="">
+                <form action="<?=base_url('/payment')?>" method="post">
                     <h5 class="text-danger">Personal Information</h5>
                     <div class="row">
 
@@ -34,7 +35,11 @@
                                     </label>
                                 </div>
                                 <div class="col-md-8">
-                                    <input type="text" id="fullName" required class="w-100 form-control form-control-sm" aria-labelledby="passwordHelpInline">
+                                    <input type="text" name="fullName" id="fullName" 
+                                    required class="w-100 form-control form-control-sm" aria-labelledby="passwordHelpInline">
+                                    <?php if(isset($validation) && $validation->hasError('fullName')) : ?>
+                                        <div class="text-danger"><?=$validation->getError('fullName')?></div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="row align-items-center">
@@ -44,7 +49,11 @@
                                     </label>
                                 </div>
                                 <div class="col-md-8">
-                                    <input type="phone" id="phoneNo" class="form-control w-100 form-control-sm" aria-labelledby="passwordHelpInline">
+                                    <input type="phone" name="phoneNo" id="phoneNo" 
+                                    class="form-control w-100 form-control-sm" aria-labelledby="passwordHelpInline">
+                                    <?php if(isset($validation) && $validation->hasError('phoneNo')) : ?>
+                                        <div class="text-danger"><?=$validation->getError('phoneNo')?></div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
@@ -52,22 +61,47 @@
                         <div class="col-md-6">
                             <div class="row align-items-center">
                                 <div class="col-md-4">
-                                    <label for="fullName" class="col-form-label">
+                                    <label for="email" class="col-form-label">
                                         Email <span class="text-danger">*</span>
                                     </label>
                                 </div>
                                 <div class="col-md-8">
-                                    <input type="text" id="fullName" required class="w-100 form-control form-control-sm" aria-labelledby="passwordHelpInline">
+                                    <input type="email" name="email" id="fullName"
+                                     required class="w-100 form-control form-control-sm" aria-labelledby="passwordHelpInline">
+                                     <?php if(isset($validation) && $validation->hasError('email')) : ?>
+                                        <div class="text-danger"><?=$validation->getError('email')?></div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                             <div class="row align-items-center">
                                 <div class="col-md-4">
-                                    <label for="phoneNo" class="col-form-label">
+                                    <label for="passportNum" class="col-form-label">
                                         Passport No <span class="text-danger">*</span>
                                     </label>
                                 </div>
                                 <div class="col-md-8">
-                                    <input type="phone" id="phoneNo" class="form-control w-100 form-control-sm" aria-labelledby="passwordHelpInline">
+                                    <input type="number" name="passportNum" id="passportNum" 
+                                    class="form-control w-100 form-control-sm" aria-labelledby="passwordHelpInline">
+                                    <?php if(isset($validation) && $validation->hasError('passportNum')) : ?>
+                                        <div class="text-danger"><?=$validation->getError('passportNum')?></div>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                            <div class="row align-items-center">
+                                <div class="col-md-4">
+                                    <label for="currencySelect" required>Select a Currency:</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <select id="currencySelect" class="form-control" name="currencySelect">
+                                            <option value="usd">United States Dollar (USD)</option>
+                                            <option value="eur">Euro (EUR)</option>
+                                            <option value="jpy">Japanese Yen (JPY)</option>
+                                            <option value="gbp">British Pound Sterling (GBP)</option>
+                                            <option value="aud">Australian Dollar (AUD)</option>
+                                    </select>
+                                    <?php if(isset($validation) && $validation->hasError('currency')) : ?>
+                                        <div class="text-danger"><?=$validation->getError('currency')?></div>
+                                    <?php endif; ?>
                                 </div>
                             </div>
                         </div>
@@ -81,7 +115,7 @@
                                     </label>
                                 </div>
                                 <div class="col-md-8" id="dynamic-form-fields">
-                                <select class="form-select" name="services[]"  aria-label="Choose service">
+                                <select class="form-select" name="services[]" required  aria-label="Choose service">
                                             <option selected>Select service</option>
                                     <?php if(isset($sub_menu)) : ?>
                                         <?php foreach($sub_menu as $sbmn) : ?>
