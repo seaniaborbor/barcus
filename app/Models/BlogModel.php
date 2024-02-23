@@ -59,7 +59,6 @@ public function blog_post_to_read($id)
     {
             return $this->db->table('blog')
                     ->where('blog.id', $id)
-                    ->join('team', 'blog.createdBy = team.email')
                     ->get()->getResult();
             
     }

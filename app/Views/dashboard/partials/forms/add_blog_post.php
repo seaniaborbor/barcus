@@ -43,3 +43,8 @@
 		<button class="btn btn-primary">Publish Post</button>
 	</div>
 </form>
+
+<script>
+        // Initialize CKEditor
+        CKEDITOR.replace('postbody');
+    </script>

@@ -24,7 +24,7 @@
 			</div>
 			<div class="card-body">
 				<div class="mx-5 rounded" style="height:350px; 
-				background-image: url(<?=base_url('public_assets/img/team/'.$team_data['profileImg'])?>);
+				background-image: url(<?=base_url('uploads/'.$team_data['profileImg'])?>);
 				background-position: top;
 				background-size: cover;
 			" >

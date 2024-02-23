@@ -129,9 +129,9 @@
                                 </select>
                                 </div>
 
-                                <div class="col-md-12 text-right">
-                                <button type="button" class="btn btn-success rounded-0 shadow-sm m-5" onclick="addFormField()">Add More Services</button>
-                                <button type="submit" class="btn-danger shadow-lg rounded-0 btn m-5" >Pay Now</button>
+                                <div class="col-md-12 text-center">
+                                <button type="button" class="btn btn-success rounded-0 shadow-sm mt-2" onclick="addFormField()">Add More Services</button>
+                                <button type="submit" class="btn-danger shadow-lg rounded-0 btn mt-2" >Pay Now</button>
                                 </div>
 
                             </div>

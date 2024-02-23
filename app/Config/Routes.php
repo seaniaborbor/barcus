@@ -16,6 +16,11 @@ $routes->get('/contact', 'PublicController::contact');
 $routes->get('payment/', 'PaymentController::index');
 $routes->post('payment', 'PaymentController::index');
 
+$routes->get('/blog-details/(:any)', 'Publiccontroller::blog_details/$1');
+$routes->post('/blog-details/(:any)', 'Publiccontroller::blog_details/$1');
+$routes->get('/blog', 'Publiccontroller::blog');
+$routes->get('/blog/(:any)', 'Publiccontroller::blog/$1');
+
 $routes->get('/auth', 'AuthController::index');
 $routes->post('/auth', 'AuthController::index');
 $routes->get('/logout', 'AuthController::logout');
@@ -60,5 +65,8 @@ $routes->post('/dashboard/testimonials', 'TestimonialsController::index');
 $routes->get('/dashboard/edit/testimonials/(:any)', 'TestimonialsController::edit/$1');
 $routes->post('/dashboard/edit/testimonials/(:any)', 'TestimonialsController::edit/$1');
 
+// orders routes
+$routes->get('/dashboard/orders/(:any)', 'PaymentController::view_orders/$1');
+$routes->get('/dashboard/delete/orders/(:any)', 'PaymentController::delete/$1');
 
 });

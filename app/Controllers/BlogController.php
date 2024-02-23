@@ -127,6 +127,9 @@ class BlogController extends BaseController
         $BlogModel = new BlogModel();
         $data['blog_data'] = $BlogModel->find($id);
 
+        $ServiceModel = new ServiceModel();
+        $data['all_categories'] = $ServiceModel->findAll();
+
         if(empty($data['blog_data'])){
         return redirect()->to('/dashboard/blog')->with('error', 'Unknown Error');
         exit();

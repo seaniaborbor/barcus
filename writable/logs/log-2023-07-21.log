@@ -254,3 +254,5 @@ WHERE `menuStatus` = :menuStatus:', [...], false)
 10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\barcus\\public\\index.php')
 INFO - 2023-07-21 04:04:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-07-21 04:04:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-21 01:02:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-21 01:02:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

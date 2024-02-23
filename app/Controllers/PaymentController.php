@@ -119,4 +119,39 @@ class PaymentController extends BaseController
 
         return view("public/payment", $data);
     }
+
+    public function view_orders($orderNo){
+
+        $customer = new CustomerModel();
+        $order = new OrderModel();
+
+        $data['orderDetails'] = $order->where('serviceOrderNo',$orderNo)->find();
+        $data['customerDetails'] = $customer->where('orderNo',$orderNo)->find();
+
+        if(!($data['orderDetails']) || !$data['customerDetails']){
+            return redirect()->to('/dashboard')->with('error', 'Order details missing or might have been deleted');
+            exit();
+        }
+
+        return view("dashboard/order_detail", $data);
+    }
+
+
+    public function delete($orderNo){
+
+        $customer = new CustomerModel();
+        $order = new OrderModel();
+
+        if(empty($orderNo)){
+          return redirect()->to('/dashboard')->with('error', 'Invalid perimeter');
+        }
+  
+        
+        if($order->where('serviceOrderNo', $orderNo)->delete()){
+            $customer->where('orderNo', $orderNo)->delete();
+          return redirect()->to('/dashboard/blog/')->with('success', 'Order deleted');
+        }else{
+          return redirect()->to('/dashboard/blog/')->with('error', 'Error Occured');
+        }
+      }
 }

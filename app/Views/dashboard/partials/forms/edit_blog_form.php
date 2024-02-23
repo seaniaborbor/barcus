@@ -1,0 +1,49 @@
+<form action="<?=base_url('/dashboard/edit/blog/'.$blog_data['id'])?>" method="post" enctype="multipart/form-data">
+	<div class="form-group mb-3">
+		<label>Post Title</label>
+		<input type="text" name="title" value="<?=$blog_data['title']?>" class="form-control" >
+		<?php if(isset($validation) && $validation->hasError('title')) : ?>
+           <div class="text-danger"><?=$validation->getError('title')?></div>
+        <?php endif; ?>
+	</div>
+
+	<div class="form-group mb-3">
+		<label>Caption Image</label>
+		<input type="file" name="featureImg"  class="form-control" >
+		<?php if(isset($validation) && $validation->hasError('featureImg')) : ?>
+           <div class="text-danger"><?=$validation->getError('featureImg')?></div>
+        <?php endif; ?>
+	</div>
+
+	<div class="form-group mb-3">
+		<label>Post Body</label>
+		<textarea id="content" class="form-control" name="postbody" ><?=$blog_data['postbody']?></textarea>
+		<?php if(isset($validation) && $validation->hasError('postbody')) : ?>
+           <div class="text-danger"><?=$validation->getError('postbody')?></div>
+        <?php endif; ?>
+	</div>
+
+	<div class="form-group mb-3">
+		<label>Project Category</label>
+		<select class="form-control" name="category" >
+			<option value="">Choose</option>
+			<?php if(isset($all_categories)): ?>
+				<?php foreach($all_categories as $cat): ?>
+					<option <?=set_select('category', $cat['serviceName'])?> value="<?=$cat['serviceName']?>"><?=$cat['serviceName']?></option>
+				<?php endforeach;?>
+			<?php endif; ?>
+		</select>
+		<?php if(isset($validation) && $validation->hasError('category')) : ?>
+           <div class="text-danger"><?=$validation->getError('category')?></div>
+        <?php endif; ?>
+	</div>
+
+	<div class="form-group mb-3">
+		<button class="btn btn-success">Publish Post</button>
+	</div>
+</form>
+
+<script>
+        // Initialize CKEditor
+        CKEDITOR.replace('postbody');
+    </script>

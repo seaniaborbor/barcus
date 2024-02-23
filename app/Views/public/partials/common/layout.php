@@ -190,6 +190,11 @@ function googleTranslateElementInit() {
               </li>
               <?php endforeach; ?>
             <?php endif; ?>
+            <li class="btn  rounded-0">
+            <a class="dropdown-item" href="/blog">
+             Blog
+            </a>
+          </li>
           </ul>
           <ul class="navbar-nav ms-auto ">
           <li class="nav-item dropdown">
