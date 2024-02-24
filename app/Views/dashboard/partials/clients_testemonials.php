@@ -20,7 +20,7 @@
 	        		<div class="card-footer">
 	        			<small><?=$testi['customer_testimoney']?></small><br>
 	        			<a href="<?=base_url('dashboard/edit/testimonials/'.$testi['id'])?>" class="btn mt-2 btn-success">Edit</a>
-	        			<button class="btn mt-2 btn-danger">Delete</button>
+	        			<a href="<?=base_url('dashboard/delete/testimonials/'.$testi['id'])?>" class="btn mt-2 btn-danger">Delete</a>
 	        		</div>
         		</div>
         	</div>

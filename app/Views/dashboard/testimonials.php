@@ -16,7 +16,7 @@
 <div class="col-md-4 pt-2">
 	<div class="card ">
 		<div class="card-header d-flex justify-content-between text-white">
-			<h6>Add to portfolio</h6>
+			<h6>Add Testimonial</h6>
 		</div>
 		<div class="card-body bg-light">
 			<?php include('partials/forms/add_testimonial_form.php')?>

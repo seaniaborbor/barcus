@@ -64,6 +64,7 @@ $routes->get('/dashboard/testimonials', 'TestimonialsController::index');
 $routes->post('/dashboard/testimonials', 'TestimonialsController::index');
 $routes->get('/dashboard/edit/testimonials/(:any)', 'TestimonialsController::edit/$1');
 $routes->post('/dashboard/edit/testimonials/(:any)', 'TestimonialsController::edit/$1');
+$routes->get('/dashboard/delete/testimonials/(:any)', 'TestimonialsController::delete/$1');
 
 // orders routes
 $routes->get('/dashboard/orders/(:any)', 'PaymentController::view_orders/$1');

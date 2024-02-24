@@ -214,6 +214,19 @@ class TestimonialsController extends BaseController{
       return view('dashboard/edit_testimonial', $data);
    }
 
+   public function delete($id){
 
+      $testimonialModel = new TestimonialsModel();
+      if(empty($id)){
+      return redirect()->to('/dashboard')->with('error', 'Invalid perimeter');
+    }
+
+    
+    if($testimonialModel->delete($id)){
+      return redirect()->to('/dashboard/testimonials/')->with('success', 'testimonial deleted');
+    }else{
+      return redirect()->to('/dashboard/blog/')->with('error', 'Error Occured');
+    }
+  }
 
 }
