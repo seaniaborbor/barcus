@@ -124,6 +124,8 @@ class PaymentController extends BaseController
 
         $customer = new CustomerModel();
         $order = new OrderModel();
+        $data['passedLink'] = "dashboard";
+
 
         $data['orderDetails'] = $order->where('serviceOrderNo',$orderNo)->find();
         $data['customerDetails'] = $customer->where('orderNo',$orderNo)->find();

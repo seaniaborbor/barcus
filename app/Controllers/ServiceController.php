@@ -18,6 +18,7 @@ class ServiceController extends BaseController
        public function index()
        {
            $data = [];
+            $data['passedLink'] = "service";
            // get all the services 
            $serviceModel = new serviceModel();
            $data['service_data'] = $serviceModel
@@ -136,6 +137,7 @@ class ServiceController extends BaseController
            {
  
                $data = [];
+                $data['passedLink'] = "service";
                $serviceModel = new serviceModel();
                $service  = $serviceModel->find($serviceId);
                $data['service_data'] = $service;

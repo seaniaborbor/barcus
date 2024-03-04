@@ -39,6 +39,7 @@ class DashboardController extends BaseController
             'team' => $team->findAll(),
             'blog' => $blog->findAll(),
         ];
+        $data['passedLink'] = "dashboard";
     
         return view('dashboard/index', $data);
     }

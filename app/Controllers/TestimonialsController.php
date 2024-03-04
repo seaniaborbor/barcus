@@ -14,7 +14,7 @@ class TestimonialsController extends BaseController{
 
       $data = [];
 
-      $data['passLink'] = "testimonials";
+      $data['passedLink'] = "testimonials";
         $data['userData'] = session()->get('userData');
 
       $testimonialModel = new TestimonialsModel();

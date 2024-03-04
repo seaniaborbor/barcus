@@ -14,7 +14,8 @@ class TeamMemberController extends BaseController{
 
         $data = [];
 
-        $data['passLink'] = "team";
+        $data['passedLink'] = "team";
+
         $data['userData'] = session()->get('userData');
 
         $TeamModel = new TeamModel();

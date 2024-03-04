@@ -1,6 +1,11 @@
 <?php 
 $userProfile = session()->get('userData');
 //print_r($userProfile);
+function activate($pageName, $passedLink){
+    if($pageName == $passedLink){
+        echo "active";
+    }
+}
 ?>
 
 
@@ -10,7 +15,7 @@ $userProfile = session()->get('userData');
 
 <head>
     <meta charset="utf-8">
-    <title>DASHMIN - Bootstrap Admin Template</title>
+    <title>Admin</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -73,12 +78,18 @@ $userProfile = session()->get('userData');
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="<?=base_url('/dashboard/')?>" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <a href="<?=base_url('/dashboard/menu')?>" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Menu</a>
-                    <a href="<?=base_url('/dashboard/service')?>" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Services</a>
-                    <a href="<?=base_url('/dashboard/blog')?>" class="nav-item nav-link"><i class="fa fa-book me-2"></i>Blog</a>
-                    <a href="<?=base_url('/dashboard/testimonials')?>" class="nav-item nav-link"><i class="fa fa-quote-right me-2"></i>Testimonials</a>
-                    <a href="<?=base_url('/dashboard/team')?>" class="nav-item nav-link"><i class="fa fa-users me-2"></i>Team/Users</a>
+                    <a href="<?=base_url('/dashboard')?>" 
+                        class="nav-item nav-link  <?php activate('dashboard', $passedLink)?>"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="<?=base_url('/dashboard/menu')?>" 
+                        class="nav-item nav-link  <?php activate('menu', $passedLink)?>"><i class="fa fa-th me-2"></i>Menu</a>
+                    <a href="<?=base_url('/dashboard/service')?>" 
+                        class="nav-item nav-link  <?php activate('service', $passedLink)?>"><i class="fa fa-keyboard me-2"></i>Services</a>
+                    <a href="<?=base_url('/dashboard/blog')?>" 
+                        class="nav-item nav-link  <?php activate('blog', $passedLink)?>"><i class="fa fa-book me-2"></i>Blog</a>
+                    <a href="<?=base_url('/dashboard/testimonials')?>" 
+                        class="nav-item nav-link  <?php activate('testimonials', $passedLink)?>"><i class="fa fa-quote-right me-2"></i>Testimonials</a>
+                    <a href="<?=base_url('/dashboard/team')?>" 
+                        class="nav-item nav-link  <?php activate('team', $passedLink)?>"><i class="fa fa-users me-2"></i>Team/Users</a>
 
                 </div>
             </nav>

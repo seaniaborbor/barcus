@@ -1,0 +1,98 @@
+INFO - 2024-03-04 16:28:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 16:28:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 16:29:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 16:29:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-04 16:29:05 --> ErrorException: Undefined variable $passedLink
+in APPPATH\Views\dashboard\partials\common\layout.php on line 82.
+ 1 APPPATH\Views\dashboard\partials\common\layout.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $passedLink', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\barcus\\app\\Views\\dashboard\\partials\\common\\layout.php', 82)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\barcus\\app\\Views\\dashboard\\partials\\common\\layout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('dashboard/partials/common/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/index', [], true)
+ 6 APPPATH\Controllers\DashboardController.php(44): view('dashboard/index', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\DashboardController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\barcus\\public\\index.php')
+INFO - 2024-03-04 16:29:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 16:30:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-04 16:30:07 --> ErrorException: Undefined variable $passedLink
+in APPPATH\Views\dashboard\partials\common\layout.php on line 82.
+ 1 APPPATH\Views\dashboard\partials\common\layout.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $passedLink', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\barcus\\app\\Views\\dashboard\\partials\\common\\layout.php', 82)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\barcus\\app\\Views\\dashboard\\partials\\common\\layout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('dashboard/partials/common/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/menu', [], true)
+ 6 APPPATH\Controllers\MenuController.php(94): view('dashboard/menu', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\MenuController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MenuController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\barcus\\public\\index.php')
+INFO - 2024-03-04 16:30:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 16:32:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 16:32:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 16:32:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 16:32:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 16:33:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-04 16:33:02 --> ErrorException: Undefined variable $passedLink
+in APPPATH\Views\dashboard\partials\common\layout.php on line 82.
+ 1 APPPATH\Views\dashboard\partials\common\layout.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $passedLink', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\barcus\\app\\Views\\dashboard\\partials\\common\\layout.php', 82)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\barcus\\app\\Views\\dashboard\\partials\\common\\layout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('dashboard/partials/common/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/order_detail', [], true)
+ 6 APPPATH\Controllers\PaymentController.php(136): view('dashboard/order_detail', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PaymentController->view_orders('U3ahF7YCgQGlCucZ')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaymentController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\barcus\\public\\index.php')
+INFO - 2024-03-04 16:33:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-04 16:33:38 --> ErrorException: Undefined variable $passedLink
+in APPPATH\Views\dashboard\partials\common\layout.php on line 82.
+ 1 APPPATH\Views\dashboard\partials\common\layout.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $passedLink', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\barcus\\app\\Views\\dashboard\\partials\\common\\layout.php', 82)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\barcus\\app\\Views\\dashboard\\partials\\common\\layout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('dashboard/partials/common/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/order_detail', [], true)
+ 6 APPPATH\Controllers\PaymentController.php(137): view('dashboard/order_detail', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PaymentController->view_orders('U3ahF7YCgQGlCucZ')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaymentController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\barcus\\public\\index.php')
+INFO - 2024-03-04 16:34:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-04 16:34:08 --> ErrorException: Undefined variable $passedLink
+in APPPATH\Views\dashboard\partials\common\layout.php on line 82.
+ 1 APPPATH\Views\dashboard\partials\common\layout.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $passedLink', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\barcus\\app\\Views\\dashboard\\partials\\common\\layout.php', 82)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\barcus\\app\\Views\\dashboard\\partials\\common\\layout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('dashboard/partials/common/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/order_detail', [], true)
+ 6 APPPATH\Controllers\PaymentController.php(137): view('dashboard/order_detail', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\PaymentController->view_orders('U3ahF7YCgQGlCucZ')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PaymentController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\barcus\\public\\index.php')
+INFO - 2024-03-04 16:35:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 16:35:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 16:35:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 16:36:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 16:38:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-03-04 16:38:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-03-04 16:38:36 --> ErrorException: Undefined variable $passedLink
+in APPPATH\Views\dashboard\partials\common\layout.php on line 82.
+ 1 APPPATH\Views\dashboard\partials\common\layout.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $passedLink', 'C:\\Users\\User\\Desktop\\codeigniterprojects\\barcus\\app\\Views\\dashboard\\partials\\common\\layout.php', 82)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\Users\\User\\Desktop\\codeigniterprojects\\barcus\\app\\Views\\dashboard\\partials\\common\\layout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(244): CodeIgniter\View\View->render('dashboard/partials/common/layout', [], true)
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('dashboard/blog', [], true)
+ 6 APPPATH\Controllers\BlogController.php(109): view('dashboard/blog', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\BlogController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BlogController))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\User\\Desktop\\codeigniterprojects\\barcus\\public\\index.php')

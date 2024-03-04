@@ -13,6 +13,7 @@ class MenuController extends BaseController
     public function index()
     {
         $data = [];
+        $data['passedLink'] = "menu";
         $menuModel = new MenuModel();
         $data['menu_data'] = $menuModel->findAll();
         // set the validation rules for the form to be submitted 
@@ -99,6 +100,7 @@ class MenuController extends BaseController
     public function edit($menuId)
         {
             $data = [];
+            $data['passedLink'] = "menu";
             $menuModel = new MenuModel();
             $menu  = $menuModel->find($menuId);
             $data['menu_data'] = $menu;
